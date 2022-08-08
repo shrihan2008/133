@@ -2,15 +2,12 @@ import plotly.express as px
 import plotly.express as px
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
-
+import pandas as pd
 import seaborn as sns
 rows = []
 name=[]
 import csv
-with open("dwarf_stars.csv",'r') as f:
-  f1=csv.reader(f)
-  for a  in f1:
-    name.append(a)
+f=pd.read_csv('star_with_gravity.csv')
 star_data=name[1:]
 star_data_rows = rows[1:]
 gravity=[]
