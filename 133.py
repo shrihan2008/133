@@ -7,12 +7,12 @@ import seaborn as sns
 rows = []
 name=[]
 import csv
-f=pd.read_csv('star_with_gravity.csv')
+f=pd.read_csv('total_stars.csv')
 star_data=name[1:]
 star_data_rows = rows[1:]
 gravity=[]
-mass=[]
-radius=[]
+mass=f['Mass'].to_list()
+radius =f['Radius'].to_list()
 star_name=[]
 for i in star_data:
   mass.append(star_data[3])
@@ -20,15 +20,6 @@ for i in star_data:
   name.append(star_data[1])
 
 star_gravity=[]
-
-for index,name in enumerate(star_name):
-  g=(float(mass[index])) *6.17/100000000000/(float(radius[index]) * float(radius[index]) ) 
-  #g=(float(mass[index])*6.17/1000) /(float(radius[index]) * float(radius[index]) ) 
-  star_gravity.append(g) 
-
-
-
-
 low_gravity_stars=[]
 
 for index,gravity in enumerate(star_gravity):
